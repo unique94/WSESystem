@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.unique.po">
+	<class name="User" table="t_user" lazy="false">
+		<id name="id" column="uid">
+			<generator class="native"/>
+		</id>
+		<property name="username" length="100" not-null="true"/>
+		<property name="password" length="100" not-null="true"/>
+		<property name="email"/>
+		<property name="phone"/>
+		<property name="register_time"/>
+	</class>
+</hibernate-mapping>
